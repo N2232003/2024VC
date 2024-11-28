@@ -1,164 +1,63 @@
-/* 基本スタイル */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
-}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>焼肉店「牛工大」</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <img src="素材/title.png" alt="焼肉店『牛工大』" class="header-logo">
+	<p>中途半端なものは提供しません。一流の肉を格安で！</p>
+</header>
 
-/* ヘッダー */
-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #9b1b1b; /* より濃い赤色 */
-	color: #fff;
-}
 
-.header-logo {
-    max-width: 100%; /* 画像が画面幅に収まるように調整 */
-    height: auto;
-    display: inline-block; /* 中央揃え */
-}
+<main>
+	 <h2>当店について</h2>
+  　<p>当店は、しちりんを使った本格炭火焼肉店です。<br>
+	   炭火焼肉でも煙などの排気には最新鋭の換気システムを導入しています。<br>
+	   オーダーは、タッチパネルから行ってください。<br>
+	   会計は、キャッシュレス歓迎、キャッシュレスの場合は１０％オフ　</p>
+    <h2>メニュー紹介</h2>
+    <p>牛肉、豚肉、鶏肉の厳選されたメニューをご覧ください。</p>
 
-/* ナビゲーション */
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px 0;
-    background-color: #801616; /* ヘッダーと合わせた少し暗い赤 */
-    margin: 0;
-}
+    <div class="menu-grid">
+        <!-- メニュー1 -->
+        <a href="beef.html" class="menu-item">
+            <div class="menu-overlay">
+                <span class="menu-title">牛肉メニュー</span>
+            </div>
+            <img src="素材/koudai_karubi.jpg" alt="牛肉メニュー" class="menu-image">
+        </a>
+        <!-- メニュー2 -->
+        <a href="pork.html" class="menu-item">
+            <div class="menu-overlay">
+                <span class="menu-title">豚肉メニュー</span>
+            </div>
+            <img src="素材/buta_horumon.jpg" alt="豚肉メニュー" class="menu-image">
+        </a>
+        <!-- メニュー3 -->
+        <a href="chicken.html" class="menu-item">
+            <div class="menu-overlay">
+                <span class="menu-title">鶏肉メニュー</span>
+            </div>
+            <img src="素材/tori_momo.jpg" alt="鶏肉メニュー" class="menu-image">
+        </a>
+        <!-- メニュー4 (リンクなし) -->
+        <div class="menu-item">
+            <div class="menu-overlay">
+            </div>
+            <img src="素材/mise1.jpg" alt="お店の雰囲気" class="menu-image">
+        </div>
+    </div>
+</main>
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    padding: 5px 10px;
-}
-
-nav ul li a:hover {
-    background-color: #ff5252; /* 赤を明るくしたホバー効果 */
-    border-radius: 5px;
-}
-
-/* メインコンテンツ */
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-main h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    margin-bottom: -10px;
-    font-size: 1.5rem;
-}
-
-/* グリッドスタイル */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2列グリッド */
-    gap: 0; /* 隙間をなくす */
-}
-
-/* 各メニューアイテムのスタイル */
-.menu-item {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: #fff; /* テキストの色 */
-    border-radius: 0;
-    overflow: hidden;
-}
-
-/* 画像のスタイル */
-.menu-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* オーバーレイ（文字背景） */
-.menu-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 半透明の黒背景 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1; /* 常に表示 */
-}
-
-/* メニュータイトルのスタイル */
-.menu-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-}
-
-/* ホバー時の動作をなくす */
-.menu-item:hover .menu-overlay,
-.menu-item:hover .menu-image {
-    transform: none;
-}
-
-/* セクション */
-/* セクションタイトル */
-.section-title {
-    text-align: center;
-    font-size: 2rem; /* フォントサイズを大きめに設定 */
-    color: #333;
-    margin-bottom: 20px;
-    padding: 10px 0;
-    border-bottom: 2px solid #333;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-}
-
-/* メニュー名のスタイル */
-section h2 {
-    font-size: 1.5rem; /* メニュー名のフォントサイズ */
-    margin-bottom: 10px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* フッター */
-footer {
-    text-align: center;
-    background: #9b1b1b;
-    color: white;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-footer a {
-    color: #ffc800;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
+<footer>
+    <address>
+        お問い合わせ: <a href="mailto:info@yakiniku.umai.up">info@yakiniku.umai.up</a>
+    </address>
+  <p><small>〒000-0000 焼肉市美食町1-2-3 | 電話番号: 000-456-7890</small></p>
+  <p><small>© 2024 牛工大</small></p>
+</footer>
+</body>
+</html>
